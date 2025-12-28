@@ -14,6 +14,7 @@ body {
 
 /* ===== HERO SECTION ===== */
 .hero {
+  padding: 50px 0;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -37,6 +38,8 @@ body {
 .hero-text {
   display: flex;
   flex-direction: column;
+  align-items: center; /* center di desktop */
+  text-align: center;
 }
 
 .hero-badge {
@@ -52,7 +55,8 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 2.1rem;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
   color: #111827;
   margin-bottom: 1rem;
@@ -161,9 +165,28 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.1rem;
+  }
+}
+
 @media (max-width: 576px) {
   .hero-text h1 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+
+  .hero-subtitle {
+    text-align: justify;
+    text-align-last: left; /* Baris terakhir rata kiri, bukan justify */
+    hyphens: auto; /* Membantu pemisahan kata jika diperlukan */
+  }
+
+  .profile-text {
+    text-align: justify;
+    text-align-last: left; /* Baris terakhir rata kiri, bukan justify */
+    hyphens: auto; /* Membantu pemisahan kata jika diperlukan */
   }
 
   .hero-image img {
@@ -174,7 +197,7 @@ body {
 
 /* ===== PROFILE SECTION ===== */
 .profile {
-  padding: 100px 0;
+  padding: 50px 0;
   background-color: #ffffff;
 }
 
@@ -280,6 +303,8 @@ body {
   .profile-text {
     margin-left: auto;
     margin-right: auto;
+    text-align: justify; /* Tambahkan ini agar tetap justify di tablet */
+    text-align-last: left; /* Baris terakhir rata kiri */
   }
 
   .profile-info {
@@ -300,11 +325,17 @@ body {
     width: 260px;
     height: 330px;
   }
+
+  .profile-text {
+    text-align: justify; /* Tetap justify di mobile */
+    text-align-last: left; /* Baris terakhir rata kiri untuk spasi normal */
+    hyphens: auto; /* Membantu pemisahan kata */
+  }
 }
 
 /* ===== SKILLS SECTION ===== */
 .skills {
-  padding: 100px 0;
+  padding: 50px 0;
   background-color: #f9fafb;
 }
 
@@ -385,7 +416,7 @@ body {
 
 /* ===== PROJECTS SECTION ===== */
 .projects {
-  padding: 100px 0;
+  padding: 50px 0;
   background-color: #ffffff;
 }
 
@@ -424,6 +455,7 @@ body {
 
 .project-content {
   padding: 22px 22px 26px;
+  text-align: center;
 }
 
 .project-content h3 {
@@ -441,10 +473,10 @@ body {
 
 .project-preview {
   display: none;
-  position: absolute;
+  position: fixed;
   inset: 0;
-  z-index: 20;
-
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
 }
@@ -454,6 +486,8 @@ body {
   background-color: rgba(0, 0, 0, 0.85);
   padding: 16px;
   border-radius: 16px;
+  max-width: 90vw; /* Tambahkan batas lebar */
+  max-height: 90vh; /* Tambahkan batas tinggi */
 }
 
 .preview-wrapper img {
@@ -467,16 +501,23 @@ body {
   position: absolute;
   top: -14px;
   right: -14px;
-  background-color: #111827;
-  color: #ffffff;
-  width: 32px;
-  height: 32px;
+  background-color: #ffffff;
+  color: #111827;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  font-size: 20px;
+  border: none; /* Tambahkan ini untuk menghilangkan border default button */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  transition: all 0.2s ease; /* Pindahkan transition ke sini */
+}
+
+.preview-close svg {
+  display: block; /* Menghilangkan spacing default SVG */
 }
 
 /* ===== RESPONSIVE ===== */
@@ -497,6 +538,7 @@ body {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.2rem;
+  justify-content: center;
 }
 
 .project-tech span {
@@ -513,6 +555,7 @@ body {
   font-weight: 600;
   color: #1d4ed8;
   text-decoration: none;
+  display: inline-block;
 }
 
 .project-link:hover {
@@ -528,7 +571,7 @@ body {
 
 /* ===== CONTACT SECTION ===== */
 .contact {
-  padding: 100px 0;
+  padding: 50px 0;
   background-color: #f9fafb;
 }
 

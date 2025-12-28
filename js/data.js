@@ -2,7 +2,7 @@ const projects = [
   {
     title: "Kuliner Nusantara",
     description:
-      "Menyediakan beberapa menu kuliner nusantara dengan rasa yang khas",
+      "Beragam menu kulineran nusantara dengan cita rasa yang khas",
     tech: ["Bootstrap", "JavaScript"],
     image: "assets/img/kuliner.jpg",
     link: "https://lipann.vercel.app/"
@@ -10,7 +10,7 @@ const projects = [
   {
     title: "Enkripsi-Dekripsi Kata",
     description:
-      "Membuat kata menjadi tersembunyi atau rahasia",
+      "Mengubah kalimat menjadi kode rahasia atau tersembunyi",
     tech: ["HTML", "CSS"],
     image: "assets/img/crypt.jpg",
     link: "https://irfanramadhan11.github.io/crypt/"
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Sejahtera Service Electronic",
     description:
-      "Melayani perbaikan barang elektronik dengan tanggung jawab.",
+      "Melayani perbaikan barang-barang elektronik dengan penuh tanggung jawab",
     tech: ["React", "Tailwind"],
     image: "assets/img/sejahtera.jpg",
     link: "https://irfanramadhan11.github.io/sejahteraservice/"
