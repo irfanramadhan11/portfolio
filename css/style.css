@@ -59,8 +59,18 @@ body {
   font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
   color: #111827;
-  margin-bottom: 1rem;
+  margin-bottom: 0.05rem;
+  line-height: 1.2; 
   align-self: center;
+}
+
+.hero-role {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2563eb; /* biru profesional */
+  margin-top: 0;
+  margin-bottom: 1rem;
+  letter-spacing: 0.3px;
 }
 
 .hero-subtitle {
@@ -138,6 +148,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .cv-image {
@@ -146,6 +157,30 @@ body {
   object-fit: contain;
   background: #fff;
   border-radius: 10px;
+}
+
+.cv-download {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #1d4ed8;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.cv-download:hover {
+  background: #1e40af;
+  transform: translateY(2px);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -169,6 +204,13 @@ body {
   .hero-text h1 {
     font-size: 2.1rem;
   }
+
+  .hero-role {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #2563eb;
+  margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -177,21 +219,38 @@ body {
     white-space: nowrap;
   }
 
+  .hero-role {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #2563eb;
+  margin-bottom: 1rem;
+  }
+
   .hero-subtitle {
+    display: block;
+    max-width: 100%;
+    margin-top: 0.75rem;
     text-align: justify;
-    text-align-last: left; /* Baris terakhir rata kiri, bukan justify */
-    hyphens: auto; /* Membantu pemisahan kata jika diperlukan */
+    text-align-last: left;  
+    hyphens: auto; 
   }
 
   .profile-text {
     text-align: justify;
-    text-align-last: left; /* Baris terakhir rata kiri, bukan justify */
-    hyphens: auto; /* Membantu pemisahan kata jika diperlukan */
+    text-align-last: left; 
+    hyphens: auto;
   }
 
   .hero-image img {
     width: 220px;
     height: 280px;
+  }
+
+  .cv-download {
+    top: 12px;
+    right: 12px;
+    padding: 8px 14px;
+    font-size: 0.8rem;
   }
 }
 
@@ -388,22 +447,27 @@ body {
 .skill-card ul {
   list-style: none;
   padding: 0;
+  display: flex;       
+  flex-wrap: wrap;        
+  gap: 10px;              
 }
 
 .skill-card ul li {
-  font-size: 0.95rem;
-  margin-bottom: 0.6rem;
+  font-size: 0.85rem;
+  margin-bottom: 0;       
+  background-color: #eff6ff;
+  border-radius: 999px;
+  padding: 6px 12px;
+  white-space: nowrap;
 }
 
 .skill-card ul li a {
-  color: #374151;
+  color: #1d4ed8;       
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.2s ease;
 }
 
 .skill-card ul li a:hover {
-  color: #1d4ed8;
   text-decoration: underline;
 }
 
@@ -411,6 +475,13 @@ body {
 @media (max-width: 992px) {
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .skill-card ul li {
+    font-size: 0.8rem;
+    padding: 5px 10px;
   }
 }
 
@@ -584,8 +655,9 @@ body {
 .contact-grid {
   margin-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
+  justify-items: center; 
 }
 
 .contact-item {
@@ -593,6 +665,9 @@ body {
   padding: 28px 24px;
   border-radius: 16px;
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 520px; 
+  text-align: center; 
 }
 
 .contact-label {
