@@ -2,7 +2,7 @@ const projectsGrid = document.getElementById("projectsGrid");
 
 projects.forEach(project => {
   const card = document.createElement("div");
-  card.className = "project-card reveal";
+  card.className = "project-card";
 
   card.innerHTML = `
     <div class="project-image">
