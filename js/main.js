@@ -2,7 +2,7 @@ const projectsGrid = document.getElementById("projectsGrid");
 
 projects.forEach(project => {
   const card = document.createElement("div");
-  card.className = "project-card";
+  card.className = "project-card reveal";
 
   card.innerHTML = `
     <div class="project-image">
@@ -74,6 +74,27 @@ if (openCV && cvPreview) {
     }
   });
 }
+
+/* =========================================================
+   SCROLL REVEAL ANIMATION
+========================================================= */
+const reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target); // animasi sekali aja
+      }
+    });
+  },
+  {
+    threshold: 0.15 // 15% elemen terlihat
+  }
+);
+
+reveals.forEach(el => observer.observe(el));
 
 
 
