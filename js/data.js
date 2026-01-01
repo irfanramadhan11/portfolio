@@ -1,11 +1,11 @@
 const projects = [
   {
-    title: "Kuliner Nusantara",
+    title: "Sejahtera Service Electronic",
     description:
-      "Beragam menu kulineran nusantara dengan cita rasa yang khas",
-    tech: ["Bootstrap", "JavaScript"],
-    image: "assets/img/kuliner.jpg",
-    link: "https://lipann.vercel.app/"
+      "Melayani perbaikan barang-barang elektronik dengan penuh tanggung jawab",
+    tech: ["React", "Vite"],
+    image: "assets/img/sejahtera.jpg",
+    link: "https://irfanramadhan11.github.io/sejahteraservice/"
   },
   {
     title: "Enkripsi-Dekripsi Kata",
@@ -16,11 +16,12 @@ const projects = [
     link: "https://irfanramadhan11.github.io/crypt/"
   },
   {
-    title: "Sejahtera Service Electronic",
+    title: "Kuliner Nusantara",
     description:
-      "Melayani perbaikan barang-barang elektronik dengan penuh tanggung jawab",
-    tech: ["React", "Tailwind"],
-    image: "assets/img/sejahtera.jpg",
-    link: "https://irfanramadhan11.github.io/sejahteraservice/"
+      "Beragam menu kulineran nusantara dengan cita rasa yang khas",
+    tech: ["Bootstrap", "JavaScript"],
+    image: "assets/img/kuliner.jpg",
+    link: "https://lipann.vercel.app/"
   }
+  
 ];
