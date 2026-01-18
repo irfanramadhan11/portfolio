@@ -5,7 +5,7 @@ const projects = [
       "Melayani perbaikan barang-barang elektronik dengan penuh tanggung jawab",
     tech: ["React", "Vite"],
     image: "assets/img/sejahtera.jpg",
-    link: "https://irfanramadhan11.github.io/sejahteraservice/"
+    link: "https://irfanramadhan11.github.io/sejahtera-service-electronic/"
   },
   {
     title: "Enkripsi-Dekripsi Kata",
